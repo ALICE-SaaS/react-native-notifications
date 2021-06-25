@@ -17,6 +17,11 @@
                     authOptions = authOptions | UNAuthorizationOptionProvisional;
                 }
             }
+            if ([option isEqualToString:@"CriticalAlert"]) {
+                if (@available(iOS 12.0, *)) {
+                    authOptions = authOptions | UNAuthorizationOptionCriticalAlert;
+                }
+            }
         }
     }
     
