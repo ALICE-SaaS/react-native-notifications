@@ -28,7 +28,7 @@ interface NativeCommandsModule {
   finishHandlingBackgroundAction(notificationId: string, backgroundFetchResult: string): void;
 }
 
-export type RequestPermissionsOptions = 'ProvidesAppNotificationSettings' | 'Provisional';
+export type RequestPermissionsOptions = 'ProvidesAppNotificationSettings' | 'Provisional' | 'CriticalAlert';
 
 export class NativeCommandsSender {
   private readonly nativeCommandsModule: NativeCommandsModule;
